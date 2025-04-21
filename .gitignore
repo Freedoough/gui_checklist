@@ -2,6 +2,9 @@
 /bin/
 /obj/
 
+# Ignore Visual Studio's .vs folder
+.vs/
+
 # Ignore IDE-specific files
 *.suo
 *.user
