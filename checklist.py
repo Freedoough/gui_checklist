@@ -10,9 +10,20 @@ root = tk.Tk()
 root.title("Checklist")
 root.geometry("700x600") 
 
+# Function to add task to listbox
+def add_task():
+    task_entry_label.config(text=entry_box.get())
 
 
-
+# Enter button widget
+enter_button = tk.Button(
+    root, 
+    text="Enter", 
+    font="Arial, 12", 
+    command=lambda: add_task(), 
+    justify="right"
+    )
+enter_button.grid(row=1, column=2, padx=1, pady=1)
 
 # Title label
 title_label = tk.Label(root, text="Checklist", font=("Arial, 24"), justify="center") 
@@ -27,6 +38,9 @@ task_name_label.grid(row=3, column=0, padx=1, pady=5)
 # Entry box
 entry_box = tk.Entry(root, width=50, justify="center")
 entry_box.grid(row=3, column=1, padx=1, pady=5)
+
+
+
 
 
 # Listbox label
